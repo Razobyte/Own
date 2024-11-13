@@ -72,7 +72,7 @@ const CenteredComponent = () => {
           />
         </motion.div>
         <motion.div
-          className='md:w-full'
+          className='md:w-full shadow-sm p-16  rounded-md'  
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
