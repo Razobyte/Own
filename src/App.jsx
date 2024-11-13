@@ -11,7 +11,7 @@ function App() {
     // Set a timer to hide the loader after 5 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 6000);
+    }, 5000);
 
     // Clear the timer if the component is unmounted
     return () => clearTimeout(timer);
@@ -29,12 +29,9 @@ function App() {
         <Header />
         <Home/>
         </>
-        
-
       )}
      
     </>
   );
 }
-
 export default App;

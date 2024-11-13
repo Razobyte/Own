@@ -7,5 +7,8 @@ export default {
   theme: {
     extend: {},
   },
+  colors: {
+    highlight: 'var(--highlight)', // Add the highlight color variable
+  },
   plugins: [],
 }

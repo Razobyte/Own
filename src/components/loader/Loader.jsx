@@ -78,7 +78,7 @@ const PortfolioIntro = () => {
   }, [introText, navigate, audioStarted]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-800 text-white">
+    <div className="flex items-center justify-center h-screen bg-[var-primary]">
       <audio
         ref={audioRef}
         src="/image/audio.mpeg"
