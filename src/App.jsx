@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Home from './components/components/home/Home';
 import PortfolioIntro from './components/loader/Loader';
-
+import CursorComponent from './components/cursor/CursorComponent';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,10 @@ function App() {
       : (
         // Show the main content when `loading` is false
         <>
+        
         <Header />
+        <CursorComponent/>
+        
         <Home/>
         </>
       )}

@@ -30,6 +30,19 @@ const CenteredComponent = () => {
     exit: { opacity: 0 },
   };
 
+  const shakeVariants = {
+    initial: { y: 0 },
+    animate: {
+      y: [0, -2, 2, -2, 2, 0], // This will create a shake effect
+      transition: {
+        repeat: Infinity, // This ensures it loops forever
+        repeatType: 'loop',
+        duration: 2, // Duration of each shake cycle
+        ease: 'easeInOut',
+      },
+    },
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % sortedText.length);
@@ -52,20 +65,25 @@ const CenteredComponent = () => {
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
-          <img src={imageData[1].mainImage} alt="main-image" className="w-full h-[450px]" />
+          <motion.img
+            src={imageData[1].mainImage}
+            alt="main-image"
+            className="w-full h-[450px]"
+            variants={shakeVariants} // Apply shake animation here
+          />
         </motion.div>
         <motion.div
           className='md:w-full'
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
-        <h1 className='sm:font-bold font-semibold lg:text-7xl
-         md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-4'>
-  <span className='border-b-4 border-[#005BBB] pb-0 pe-3'>
-    𝗌ɦ𝗂𝗏α𐓣𝗂
-  </span>
-  𝗌ɦυ𝗄ᥣα
-</h1>
+          <h1 className='sm:font-bold font-semibold lg:text-7xl
+           md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-4'>
+            <span className='border-b-4 border-[#005BBB] pb-0 pe-3'>
+              𝗌ɦ𝗂𝗏α𐓣𝗂
+            </span>
+            𝗌ɦυ𝗄ᥣα
+          </h1>
           <AnimatePresence mode="wait">
             <motion.h1
               key={currentIndex}
@@ -80,51 +98,45 @@ const CenteredComponent = () => {
             </motion.h1>
           </AnimatePresence>
           <div className='mt-12'>
-          <ul className="flex space-x-6">
-      {/* LinkedIn */}
-      <li>
-        <a href="https://www.linkedin.com/in/%F0%9D%98%9A%EA%AE%92%EA%AD%B5%D1%B5%F0%9D%91%8E%E0%B8%97i-s%E2%B2%8F%E1%B4%9C%E1%B4%8B%CA%9F%E1%B4%80-38280121b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="w-9 h-9 text-white" />
-        </a>
-      </li>
+            <ul className="flex space-x-6">
+              {/* LinkedIn */}
+              <li>
+                <a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="w-9 h-9 text-white" />
+                </a>
+              </li>
 
-      {/* GitHub */}
-      <li>
-        <a href="https://github.com/tanushukla1332" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="w-9 h-9 text-white" />
-        </a>
-      </li>
+              {/* GitHub */}
+              <li>
+                <a href="https://github.com/tanushukla1332" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="w-9 h-9 text-white" />
+                </a>
+              </li>
 
-      {/* Phone Number */}
-      <li>
-        <a href="tel:+918303898470">
-          <FaPhoneAlt className="w-9 h-9 text-white" />
-        </a>
-      </li>
+              {/* Phone Number */}
+              <li>
+                <a href="tel:+918303898470">
+                  <FaPhoneAlt className="w-9 h-9 text-white" />
+                </a>
+              </li>
 
-      {/* Email */}
-      <li>
-        <a href="mailto:your-email@example.com">
-          <FaEnvelope className="w-10 h-10 text-white" />
-        </a>
-      </li>
+              {/* Email */}
+              <li>
+                <a href="mailto:your-email@example.com">
+                  <FaEnvelope className="w-10 h-10 text-white" />
+                </a>
+              </li>
 
-      {/* Resume */}
-      <li>
-        <a href="/image/CV.pdf" target="_blank" rel="noopener noreferrer">
-          <FaFileAlt className="w-9 h-9 text-white" />
-        </a>
-      </li>
-    </ul>
- 
-</div>
-
-
-
-
+              {/* Resume */}
+              <li>
+                <a href="/image/CV.pdf" target="_blank" rel="noopener noreferrer">
+                  <FaFileAlt className="w-9 h-9 text-white" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </motion.div>
       </div>
-
     </motion.div>
   );
 };
