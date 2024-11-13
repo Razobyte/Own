@@ -29,11 +29,13 @@ const CursorComponent = () => {
   return (
     <>
       {/* Outer Cursor */}
-      <div className="cursor fixed w-10 h-10 border border-white rounded-full pointer-events-none transition-all z-50">
+      <div className="cursor fixed 
+      w-10 h-10 border border-white rounded-full pointer-events-none transition-all z-50">
 
       </div>
       {/* Inner Cursor */}
-      <div className="inner-cursor fixed w-2.5 h-2.5 bg-blue-700 rounded-full pointer-events-none z-50"></div>
+      <div className="inner-cursor fixed w-2.5 h-2.5 bg-blue-700 rounded-full
+       pointer-events-none z-50"></div>
       
       {/* Example elements to hover over */}
     </>

@@ -68,8 +68,7 @@ const CenteredComponent = () => {
           <motion.img
             src={imageData[1].mainImage}
             alt="main-image"
-            className="w-full h-[450px]"
-            variants={shakeVariants} // Apply shake animation here
+            className="w-full h-[450px]  transform transition-transform duration-300 hover:scale-110" // Apply shake animation here
           />
         </motion.div>
         <motion.div
