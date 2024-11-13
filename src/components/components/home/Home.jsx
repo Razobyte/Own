@@ -40,13 +40,13 @@ const CenteredComponent = () => {
 
   return (
     <motion.div
-      className='flex w-full justify-center items-center py-10'
+      className='flex w-full justify-center items-center lg:py-10 md:py-8 sm:py-4 py-3'
       variants={containerVariants}
       initial="initial"
       animate="animate"
       exit="exit"
     >
-      <div className='max-w-6xl md:flex justify-evenly items-center w-full gap-10'>
+      <div className='max-w-6xl sm:flex justify-evenly items-center w-full sm:gap-10 gap-0 md:px-0 px-3'>
         <motion.div
           className='md:w-1/2 '
           variants={itemVariants}
@@ -55,11 +55,12 @@ const CenteredComponent = () => {
           <img src={imageData[1].mainImage} alt="main-image" className="w-full h-[450px]" />
         </motion.div>
         <motion.div
-          className='w-full'
+          className='md:w-full'
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
-        <h1 className='font-bold text-7xl pb-1 mb-5'>
+        <h1 className='sm:font-bold font-semibold lg:text-7xl
+         md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-4'>
   <span className='border-b-4 border-[#005BBB] pb-0 pe-3'>
     𝗌ɦ𝗂𝗏α𐓣𝗂
   </span>
@@ -73,7 +74,7 @@ const CenteredComponent = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 1, ease: 'easeInOut' }}
-              className="text-5xl"
+              className="sm:text-5xl text-4xl"
             >
               {sortedText[currentIndex]}
             </motion.h1>

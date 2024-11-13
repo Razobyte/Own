@@ -4,7 +4,7 @@ import imageData from '../../config';
 
 export default function Header() {
   return (
-    <div className="main-header-div flex justify-center items-center  shadow-lg">
+    <div className="main-header-div  w-full flex justify-center items-center  shadow-lg">
       <div className="main-header-diviind flex justify-between w-full px-4 items-center">
         {/* Logo Image */}
         <div className="logo-container lg:ps-56 md:ps-28 sm:ps-10 xs:ps-5">
