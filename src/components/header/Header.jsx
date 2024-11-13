@@ -7,7 +7,7 @@ export default function Header() {
     <div className="main-header-div  w-full flex justify-center items-center  shadow-lg">
       <div className="main-header-diviind flex justify-between w-full px-4 items-center">
         {/* Logo Image */}
-        <div className="logo-container lg:ps-56 md:ps-28 sm:ps-10 xs:ps-5">
+        <div className="logo-container lg:ps-56 md:ps-28 sm:ps-10 xs:ps-5 ps-3">
           <img 
             src={imageData[0].logoImage}  // Accessing the first item in the imageData array
             alt="Logo" 
