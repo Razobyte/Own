@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import imageData from '../../../config';
 import { FaLinkedin, FaGithub, FaPhoneAlt, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import FloatingBackground from './Background';
 
 const CenteredComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,6 +53,8 @@ const CenteredComponent = () => {
   }, [sortedText.length]);
 
   return (
+    <>
+    <FloatingBackground/>
     <motion.div
       className='flex w-full justify-center items-center lg:py-10 md:py-8 sm:py-4 py-3'
       variants={containerVariants}
@@ -137,6 +140,7 @@ const CenteredComponent = () => {
         </motion.div>
       </div>
     </motion.div>
+    </>
   );
 };
 
