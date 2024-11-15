@@ -47,13 +47,13 @@ const FloatingBackground = () => {
       this.x += this.dx;
       this.y += this.dy;
 
-      this.draw(canvas.getContext('3d'));
+      this.draw(canvas.getContext('2d'));
     }
   }
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('3d');
+    const ctx = canvas.getContext('2d');
     let animationFrameId;
     let balls = [];
 
@@ -104,7 +104,7 @@ const FloatingBackground = () => {
   return (
     <canvas 
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full -z-10"
+      className="fixed top-0 left-0 w-full h-full -z-20"
     />
   );
 };
