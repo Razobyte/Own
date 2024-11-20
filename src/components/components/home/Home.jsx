@@ -3,8 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import imageData from '../../../config';
 import { FaLinkedin, FaGithub, FaPhoneAlt, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 import FloatingBackground from './Background';
-
-const CenteredComponent = () => {
+import About from '../about/About';
+import Projects from '../projects/Projects';
+import Services from '../services/Services';
+import Contact from '../contact/Contact';
+const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const text = [
@@ -56,7 +59,7 @@ const CenteredComponent = () => {
     <>
     <FloatingBackground/>
     <motion.div
-      className='flex w-full justify-center items-center lg:py-10 md:py-8 sm:py-4 py-3'
+      className='flex w-full justify-center items-center pb-5'
       variants={containerVariants}
       initial="initial"
       animate="animate"
@@ -94,7 +97,7 @@ const CenteredComponent = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 1, ease: 'easeInOut' }}
-              className="sm:text-5xl text-4xl"
+              className="sm:text-5xl text-4xl h-36"
             >
               {sortedText[currentIndex]}
             </motion.h1>
@@ -139,9 +142,22 @@ const CenteredComponent = () => {
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.div>  
+    <section id="about">
+        <About /> {/* Include the About component here */}
+      </section> 
+      <section id="projects">
+        <Projects /> {/* Include the About component here */}
+      </section>
+      <section id="services">
+        <Services /> {/* Include the About component here */}
+      </section>
+      <section id="contact">
+        <Contact/> {/* Include the About component here */}
+      </section>
+
     </>
   );
 };
 
-export default CenteredComponent;
+export default Home;

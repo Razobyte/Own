@@ -13,8 +13,7 @@ export default function Header() {
   }
 
   return (
-    <div className="main-header-div w-full flex justify-center items-center z-50
-     shadow-sm sticky top-0 bg-[var-primary] ">
+    <div className="main-header-div w-full flex justify-center items-center z-50 shadow-sm sticky top-0 bg-[var-primary]">
       <div className="main-header-diviind flex justify-between w-full items-center px-20">
         
         {/* Logo Image */}
@@ -45,41 +44,71 @@ export default function Header() {
             </button>
 
             <ul className="pt-32 space-y-6 text-5xl px-6">
+{/* Home Link */}
+            <li>
+                <a
+                  href="#"  // Hash link to scroll to the About section
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
+                  onClick={toggleVisible}
+                >
+                  Home
+                </a>
+              </li>
+
+              {/* About Link */}
               <li>
-                <Link
-                  to="/about"
+                <a
+                  href="#about"  // Hash link to scroll to the About section
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
                   About
-                </Link>
+                </a>
               </li>
+
+              {/* Projects Link */}
               <li>
-                <Link
-                  to="/projects"
+                <a
+                  href="#projects"  // This will navigate to the Projects page
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
                   Projects
-                </Link>
+                </a>
               </li>
+
+              {/* Services Link */}
               <li>
-                <Link
-                  to="/services"
+                <a
+                  href="#services"  // This will navigate to the Services page
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
                   Services
-                </Link>
+                </a>
               </li>
+
+              {/* Contact Link */}
               <li>
-                <Link
-                  to="/contact"
+                <a
+                  href="#contact"  // This will navigate to the Contact page
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
                   Contact
-                </Link>
+                </a>
+              </li>
+
+              {/* Resume Link */}
+              <li>
+                <a
+                  href="/image/CV.pdf"  // Resume link that opens the PDF
+                  target="_blank" rel="noopener noreferrer"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
+                  onClick={toggleVisible}
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </motion.nav>
