@@ -113,7 +113,8 @@ const ProjectSection = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="absolute -top-2 left-0 h-[1px] w-full bg-gradient-to-r from-[#005BBB] to-transparent" />
-          <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-500">
+          <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white
+           to-purple-400">
             View Our Projects
           </h1>
         </motion.div>
