@@ -84,7 +84,7 @@ const ServiceCard = ({ skill, index }) => {
       scale: 1,
       transition: {
         duration: 0.5,
-        delay: index * 0.1
+        delay: index * 0.5
       }
     }
   };
@@ -105,7 +105,7 @@ const ServiceCard = ({ skill, index }) => {
         whileHover={{ 
           scale: 1.05,
           rotate: [0, 2, 0],
-          transition: { duration: 0.3 }
+          transition: { duration: 0.6 }
         }}
       >
         <motion.div 
@@ -113,7 +113,7 @@ const ServiceCard = ({ skill, index }) => {
           animate={{
             y: [0, -10, 0],
             transition: {
-              duration: 2,
+              duration: 7,
               repeat: Infinity,
               ease: "easeInOut"
             }
@@ -125,7 +125,7 @@ const ServiceCard = ({ skill, index }) => {
               scale: [1, 1.1, 1]
             }}
             transition={{
-              duration: 3,
+              duration: 50,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -181,7 +181,7 @@ const SkillsCarousel = () => {
   }, [currentIndex, controls]);
 
   return (
-    <div className="bg-gradient-to-b from-[#2b2929] via-gray-800 to-[#3b3a3a] py-20
+    <div className="bg-gradient-to-b from-[#2b2929] via-gray-900 to-[#3b3a3a] py-20
      relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">

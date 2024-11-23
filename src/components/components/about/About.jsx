@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <motion.div className="flex bg-gradient-to-b from-[#2b2929] via-gray-800 to-[#3b3a3a] 
+    <motion.div className="flex bg-gradient-to-b from-[#2b2929] via-gray-700 to-[#3b3a3a] 
      relative overflow-hidden w-full justify-center items-center lg:py-10 md:py-8 sm:py-4 py-3">
         <div className="absolute inset-0 overflow-hidden">
         {[...Array(30)].map((_, i) => (

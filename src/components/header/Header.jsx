@@ -11,12 +11,12 @@ export default function Header() {
   function toggleVisible() {
     setIsVisible(!isVisible);
   }
-
   return (
-    <div className="main-header-div w-full flex justify-center items-center z-50 shadow-sm sticky top-0
-     bg-[var-primary]">
-      <div className="main-header-diviind flex justify-between w-full items-center px-20">
-        
+
+    <div className="main-header-div w-full flex justify-center items-center  shadow-sm 
+    bg-gradient-to-b from-[#2b2929]/10  to-[#3b3a3a]/20 
+    z-50 sticky top-0">
+      <div className="main-header-diviind flex justify-between w-full items-center px-10">
         {/* Logo Image */}
         <div className="logo-container">
           <img
@@ -26,15 +26,17 @@ export default function Header() {
           />
         </div>
 
-        {/* Menu Button */}
-        <button onClick={toggleVisible} className='rounded-full w-18 h-16 cta-button'>
+        {/* Menu Button (Mobile Only) */}
+        <button 
+          onClick={toggleVisible} 
+          className="md:hidden rounded-full w-18 h-16 cta-button text-xl">
           <FiList className="text-white w-11 h-11" />
         </button>
 
-        {/* Animated Navigation Links */}
+        {/* Animated Navigation Links (Mobile Only) */}
         {isVisible && (
           <motion.nav
-            className="absolute top-0 right-2 bg-[var-primary] text-white h-screen w-64 shadow-lg"
+            className="md:hidden absolute top-0 right-2 bg-[var-primary] text-white h-screen w-64 shadow-lg"
             initial={{ x: "0%" }}
             animate={{ x: isVisible ? "0%" : "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -43,12 +45,11 @@ export default function Header() {
             <button onClick={toggleVisible} className="absolute top-6 right-12 w-18 h-16 cta-button text-white text-3xl rounded-full">
               <IoClose className="text-white w-11 h-11" />
             </button>
-
-            <ul className="pt-32 space-y-6 text-5xl px-6">
-{/* Home Link */}
-            <li>
+            <ul className="space-y-6 text-lg px-6">
+              {/* Home Link */}
+              <li>
                 <a
-                  href="#"  // Hash link to scroll to the About section
+                  href="#home"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
@@ -59,7 +60,7 @@ export default function Header() {
               {/* About Link */}
               <li>
                 <a
-                  href="#about"  // Hash link to scroll to the About section
+                  href="#about"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
@@ -70,7 +71,7 @@ export default function Header() {
               {/* Projects Link */}
               <li>
                 <a
-                  href="#projects"  // This will navigate to the Projects page
+                  href="#projects"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
@@ -81,7 +82,7 @@ export default function Header() {
               {/* Services Link */}
               <li>
                 <a
-                  href="#services"  // This will navigate to the Services page
+                  href="#services"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
@@ -92,7 +93,7 @@ export default function Header() {
               {/* Contact Link */}
               <li>
                 <a
-                  href="#contact"  // This will navigate to the Contact page
+                  href="#contact"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
                 >
@@ -103,7 +104,7 @@ export default function Header() {
               {/* Resume Link */}
               <li>
                 <a
-                  href="/image/CV.pdf"  // Resume link that opens the PDF
+                  href="/image/CV.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block"
                   onClick={toggleVisible}
@@ -114,6 +115,67 @@ export default function Header() {
             </ul>
           </motion.nav>
         )}
+
+        {/* Desktop Navigation Links (Visible on larger screens) */}
+        <div className="hidden md:flex">
+        <ul className="flex  gap-4  text-xl ">
+              {/* Home Link */}
+              <li>
+                <a
+                  href="#home"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
+                  onClick={toggleVisible}
+                >
+                  Home
+                </a>
+              </li>
+
+              {/* About Link */}
+              <li>
+                <a
+                  href="#about"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
+                  onClick={toggleVisible}
+                >
+                  About
+                </a>
+              </li>
+
+              {/* Projects Link */}
+              <li>
+                <a
+                  href="#projects"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
+                  onClick={toggleVisible}
+                >
+                  Projects
+                </a>
+              </li>
+
+              {/* Services Link */}
+              <li>
+                <a
+                  href="#services"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
+                  onClick={toggleVisible}
+                >
+                  Services
+                </a>
+              </li>
+
+              {/* Contact Link */}
+              <li>
+                <a
+                  href="#contact"
+                  className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
+                  onClick={toggleVisible}
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+        </div>
+
       </div>
     </div>
   );

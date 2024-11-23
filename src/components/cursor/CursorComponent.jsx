@@ -8,18 +8,14 @@ const CursorComponent = () => {
     const updateCursorPosition = (e) => {
       const x = e.clientX;
       const y = e.clientY;
-      
       // Move the outer circle (cursor)
       cursor.style.left = `${x - cursor.offsetWidth / 2}px`;
       cursor.style.top = `${y - cursor.offsetHeight / 2}px`;
-      
       // Move the inner circle (actual cursor)
       innerCursor.style.left = `${x - innerCursor.offsetWidth / 2}px`;
       innerCursor.style.top = `${y - innerCursor.offsetHeight / 2}px`;
     };
-    
-    window.addEventListener('mousemove', updateCursorPosition);
-    
+    window.addEventListener('mousemove', updateCursorPosition);    
     // Remove event listener on cleanup
     return () => {
       window.removeEventListener('mousemove', updateCursorPosition);

@@ -59,7 +59,7 @@ const Home = () => {
     <>
     <FloatingBackground/>
     <motion.div
-      className='flex w-full justify-center items-center pb-5'
+      className='flex w-full justify-center items-center py-10'
       variants={containerVariants}
       initial="initial"
       animate="animate"
@@ -72,7 +72,7 @@ const Home = () => {
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
           <motion.img
-            src={imageData[1].mainImage}
+            src='/image/shivani.webp'
             alt="main-image"
             className="w-full h-[450px]  transform transition-transform duration-300 hover:scale-110" // Apply shake animation here
           />
