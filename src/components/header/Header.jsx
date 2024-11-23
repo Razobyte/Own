@@ -122,7 +122,7 @@ export default function Header() {
               {/* Home Link */}
               <li>
                 <a
-                  href="#home"
+                  href="#"
                   className="hover:rotate-2 hover:scale-105 transform transition-transform duration-300 inline-block text-white"
                   onClick={toggleVisible}
                 >
