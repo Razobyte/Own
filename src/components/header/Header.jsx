@@ -13,7 +13,8 @@ export default function Header() {
   }
 
   return (
-    <div className="main-header-div w-full flex justify-center items-center z-50 shadow-sm sticky top-0 bg-[var-primary]">
+    <div className="main-header-div w-full flex justify-center items-center z-50 shadow-sm sticky top-0
+     bg-[var-primary]">
       <div className="main-header-diviind flex justify-between w-full items-center px-20">
         
         {/* Logo Image */}

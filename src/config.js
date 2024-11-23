@@ -6,6 +6,7 @@ const imageData = [
     {
       mainImage:"/image/shivani.png"
     }
+    
   ];
   
   export default imageData;

@@ -82,7 +82,8 @@ const Home = () => {
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
-          <h1 className='sm:font-bold font-semibold lg:text-7xl
+          <h1 
+          className='sm:font-bold font-semibold lg:text-7xl
            md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-4'>
             <span className='border-b-4 border-[#005BBB] pb-0 pe-3'>
               𝗌ɦ𝗂𝗏α𐓣𝗂
