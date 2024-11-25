@@ -12,8 +12,8 @@ const FloatingBackground = () => {
       this.radius = radius;
       this.color = color;
       this.isBlurred = isBlurred;
-      // Different opacity for blurred and normal balls
-      this.alpha = isBlurred ? 0.6 : 0.4;
+      // Reduced opacity for subtle background effect
+      this.alpha = isBlurred ? 0.2 : 0.1;  // Set a low opacity to make balls less distracting
     }
 
     draw(ctx) {
@@ -71,8 +71,10 @@ const FloatingBackground = () => {
 
     const init = () => {
       balls = [];
-      for (let i = 0; i < 20; i++) {
-        const radius = Math.random() * 60 + 20;
+      // Increase number of balls to 50
+      for (let i = 0; i < 50; i++) {
+        // Reduced the maximum radius to make the balls smaller
+        const radius = Math.random() * 30 + 10; // Range: 10 to 40
         const x = Math.random() * (canvas.width - radius * 2) + radius;
         const y = Math.random() * (canvas.height - radius * 2) + radius;
         const dx = (Math.random() - 0.5) * 2;
@@ -108,4 +110,5 @@ const FloatingBackground = () => {
     />
   );
 };
+
 export default FloatingBackground;
