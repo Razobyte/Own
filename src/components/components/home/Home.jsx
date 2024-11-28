@@ -7,6 +7,7 @@ import About from '../about/About';
 import Projects from '../projects/Projects';
 import Services from '../services/Services';
 import Contact from '../contact/Contact';
+import Footer from '../footer/Footer';
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -156,6 +157,7 @@ const Home = () => {
       <section id="contact">
         <Contact/> {/* Include the About component here */}
       </section>
+      <Footer/>
 
     </>
   );

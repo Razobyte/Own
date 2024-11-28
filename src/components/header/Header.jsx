@@ -29,23 +29,25 @@ export default function Header() {
         {/* Menu Button (Mobile Only) */}
         <button 
           onClick={toggleVisible} 
-          className="md:hidden rounded-full w-18 h-16 cta-button text-xl">
-          <FiList className="text-white w-11 h-11" />
+          className='bg-inherit '
+          >
+          <FiList className="md:hidden rounded-full  p-2 w-14 h-14 cta-button"/>
         </button>
 
         {/* Animated Navigation Links (Mobile Only) */}
         {isVisible && (
           <motion.nav
-            className="md:hidden absolute top-0 right-2 bg-[var-primary] text-white h-screen w-64 shadow-lg"
+            className="md:hidden absolute top-0 right-0 bg-[var-primary] text-white h-screen w-72 shadow-lg"
             initial={{ x: "0%" }}
             animate={{ x: isVisible ? "0%" : "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {/* Close Button */}
-            <button onClick={toggleVisible} className="absolute top-6 right-12 w-18 h-16 cta-button text-white text-3xl rounded-full">
-              <IoClose className="text-white w-11 h-11" />
+            <button onClick={toggleVisible} className='bg-inherit'>
+              <IoClose  className="absolute top-2 left-4 w-12
+             h-12 cta-button text-white  rounded-full" />
             </button>
-            <ul className="space-y-6 text-lg px-6">
+            <ul className="space-y-6 text-lg px-6 justify-center items-center flex flex-col">
               {/* Home Link */}
               <li>
                 <a
