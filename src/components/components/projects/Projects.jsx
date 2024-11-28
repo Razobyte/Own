@@ -38,7 +38,7 @@ const projectsData = [
   {
     title:"Haealing-Gloves",
     description:"Healing Gloves is a comprehensive hospital management platform designed to manage patient data and medical test bookings seamlessly. Built with React JS and utilizing POST API Integration, this site allows users to fill out forms to book various medical tests, while administrators manage all patient records and bookings through the backend. The website is also SEO optimized, ensuring it ranks well in search engines for relevant medical and healthcare queries, driving organic traffic. The combination of dynamic front-end features, smooth user experience, and robust backend makes it an ideal solution for healthcare facilities looking to offer easy test bookings and real-time data management.",
-    technologies:["React JS", "POST API Integration", "SEO Optimization."],
+    technologies:["React JS", "Tailwind css","POST API Integration", "SEO Optimization."],
     liveLink:"https://www.healinggloves.in/"
   }
 
