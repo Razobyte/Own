@@ -125,7 +125,7 @@ const ServiceCard = ({ skill, index }) => {
               scale: [1, 1.1, 1]
             }}
             transition={{
-              duration: 50,
+              duration: 10,  // Slower rotation speed (360 degrees)
               repeat: Infinity,
               ease: "linear"
             }}
@@ -163,7 +163,7 @@ const SkillsCarousel = () => {
     if (isInView) {
       interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % skillsData.length);
-      }, 3000);
+      }, 5000); // Carousel scrolls every 5 seconds
     }
 
     return () => clearInterval(interval);
@@ -250,9 +250,7 @@ const SkillsCarousel = () => {
           {skillsData.map((_, index) => (
             <motion.button
               key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? 'bg-white' : 'bg-gray-600'
-              }`}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-white' : 'bg-gray-600'}`}
               whileHover={{ scale: 1.2 }}
               onClick={() => setCurrentIndex(index)}
             />

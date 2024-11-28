@@ -115,28 +115,24 @@ const Home = () => {
                   <FaLinkedin className="w-9 h-9 text-white" />
                 </a>
               </li>
-
               {/* GitHub */}
               <li>
                 <a href="https://github.com/tanushukla1332" target="_blank" rel="noopener noreferrer">
                   <FaGithub className="w-9 h-9 text-white" />
                 </a>
               </li>
-
               {/* Phone Number */}
               <li>
                 <a href="tel:+918303898470">
                   <FaPhoneAlt className="w-9 h-9 text-white" />
                 </a>
               </li>
-
               {/* Email */}
               <li>
                 <a href="mailto:your-email@example.com">
                   <FaEnvelope className="w-10 h-10 text-white" />
                 </a>
               </li>
-
               {/* Resume */}
               <li>
                 <a href="/image/CV.pdf" target="_blank" rel="noopener noreferrer">
@@ -161,9 +157,7 @@ const Home = () => {
         <Contact/> {/* Include the About component here */}
       </section>
       <Footer/>
-
     </>
   );
 };
-
 export default Home;
