@@ -75,7 +75,10 @@ const Home = () => {
           <motion.img
             src='/image/shivani.webp'
             alt="main-image"
-            className="w-full h-[450px]  transform transition-transform duration-300 hover:scale-110" // Apply shake animation here
+            className="w-full h-auto 
+             transform transition-transform
+              duration-300 hover:scale-110 bg-inherit rounded-ss-3xl rounded-br-3xl
+               border-l-8 border-l-blue-900" // Apply shake animation here
           />
         </motion.div>
         <motion.div
