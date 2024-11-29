@@ -9,7 +9,6 @@ import {
 } from 'react-icons/fa';
 import { SiRedux, SiTailwindcss, SiMui, SiBootstrap } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
-
 const skillsData = [
   {
     icon: <FaHtml5 className="text-orange-500" />,

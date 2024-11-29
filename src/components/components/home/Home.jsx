@@ -135,7 +135,7 @@ const Home = () => {
               </li>
               {/* Resume */}
               <li>
-                <a href="/image/CV.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/image/Shivani-shukla.pdf" target="_blank" rel="noopener noreferrer">
                   <FaFileAlt className="w-9 h-9 text-white" />
                 </a>
               </li>
