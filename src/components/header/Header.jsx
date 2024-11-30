@@ -14,7 +14,7 @@ export default function Header() {
   return (
 
     <div className="main-header-div w-full flex justify-center items-center  shadow-sm 
-    bg-gradient-to-b from-[#2b2929]/60  to-[#3b3a3a]/50 
+    bg-gradient-to-b sm:from-[#2b2929]/60 from-[#2b2929] sm:to-[#3b3a3a]/50 to-[#3b3a3a] 
     z-50 sticky top-0">
       <div className="main-header-diviind flex justify-between w-full items-center px-10">
         {/* Logo Image */}

@@ -104,16 +104,16 @@ const ProjectSection = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[var-primary] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 py-20 relative">
+      <div className="max-w-7xl mx-auto px-4 lg:py-20  md:py-12 sm:py-8 py-10 relative">
         {/* Header with line */}
         <motion.div 
-          className="relative mb-20"
+          className="relative lg:mb-20 md:mb-16 sm:mb-12 mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <div className="absolute -top-2 left-0 h-[1px] w-full bg-gradient-to-r from-[#005BBB] to-transparent" />
-          <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white
+          <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white
            to-purple-400">
             View Our Projects
           </h1>
@@ -138,9 +138,9 @@ const ProjectSection = () => {
                 }}
               >
                 {/* Project title with border */}
-                <div className="relative mb-8">
+                <div className="relative sm:mb-8 mb-4">
                   <div className="absolute -left-4 top-0 w-[2px] h-full bg-gradient-to-b from-orange-500 to-purple-600" />
-                  <h2 className="text-4xl font-bold text-white mb-4">{currentProject.title}</h2>
+                  <h2 className="lg:text-4xl  md:text-3xl sm:text-2xl text-2xl font-bold text-white mb-4">{currentProject.title}</h2>
                 </div>
 
                 {/* Technology tags */}
@@ -156,8 +156,8 @@ const ProjectSection = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.1 * index }}
-                      className="px-4 py-2 rounded-full bg-gradient-to-r from-[#005BBB]/50
-                       to-white/20 border border-[#005BBB]/40 text-white text-sm"
+                      className="px-4 sm:py-2 py-1 rounded-full bg-gradient-to-r from-[#005BBB]/50
+                       to-white/20 border border-[#005BBB]/40 text-white sm:text-sm text-xs"
                     >
                       {tech}
                     </motion.span>
@@ -166,7 +166,7 @@ const ProjectSection = () => {
 
                 {/* Project description */}
                 <motion.p 
-                  className="text-gray-100 mb-8 leading-relaxed"
+                  className="text-gray-100 sm:text-lg   sm:font-normal font-extralight text-sm mb-8 leading-relaxed"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
@@ -185,7 +185,8 @@ const ProjectSection = () => {
                     href={currentProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-white hover:text-orange-500 transition-colors group"
+                    className="flex items-center
+                     gap-2 text-white hover:text-orange-500 transition-colors group"
                   >
                     <BiLink />
                     <span className="relative">

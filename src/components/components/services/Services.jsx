@@ -180,7 +180,7 @@ const SkillsCarousel = () => {
   }, [currentIndex, controls]);
 
   return (
-    <div className="bg-gradient-to-b from-[#2b2929] via-gray-900 to-[#3b3a3a] py-20
+    <div className="bg-gradient-to-b from-[#2b2929] via-gray-900 to-[#3b3a3a] lg:py-20 sm:py-14 py-10
      relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -214,7 +214,7 @@ const SkillsCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold text-white mb-4">
+          <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-white mb-4">
             My Skills & Services
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">

@@ -77,19 +77,19 @@ const Home = () => {
             alt="main-image"
             className="w-full h-auto 
              transform transition-transform
-              duration-300 hover:scale-110 bg-inherit rounded-ss-3xl rounded-br-3xl
+              duration-300 sm:hover:scale-110 bg-inherit rounded-ss-3xl rounded-br-3xl
                border-l-8 border-l-blue-900" // Apply shake animation here
           />
         </motion.div>
         <motion.div
-          className='md:w-full shadow-sm p-16  rounded-md'  
+          className='md:w-full shadow-sm sm:p-16 p-4  rounded-md'  
           variants={itemVariants}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
           <h1 
           className='sm:font-bold font-semibold lg:text-7xl
-           md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-4'>
-            <span className='border-b-4 border-[#005BBB] pb-0 pe-3'>
+           md:text-5xl sm:text-4xl xs:text-3xl text-4xl pb-1 mb-5 sm:mt-0 mt-0'>
+            <span className='border-b-4 border-[#005BBB] pb-0 sm"pe-3 pe-0'>
               𝗌ɦ𝗂𝗏α𐓣𝗂
             </span>
             𝗌ɦυ𝗄ᥣα
@@ -102,12 +102,12 @@ const Home = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 1, ease: 'easeInOut' }}
-              className="sm:text-5xl text-4xl h-36"
+              className="sm:text-5xl text-3xl sm:h-36 h-auto"
             >
               {sortedText[currentIndex]}
             </motion.h1>
           </AnimatePresence>
-          <div className='mt-12'>
+          <div className='sm:mt-12  mt-10'>
             <ul className="flex space-x-6">
               {/* LinkedIn */}
               <li>
