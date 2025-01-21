@@ -80,7 +80,6 @@ const Contact = () => {
       setShowError(true);
       return;
     }
-
     setIsSubmitting(true);
 
     try {
@@ -95,7 +94,7 @@ const Contact = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-[var-primary] lg:py-16 sm:py-11 py-10">
@@ -108,15 +107,14 @@ const Contact = () => {
             I'd love to hear from you! Send me a message and I'll respond as soon as possible.
           </p>
         </div>
-
+        
         {showSuccess && (
           <div className="mb-6 bg-green-500 bg-opacity-10 border border-green-500 rounded-lg p-4 flex items-center text-green-500 transition-all duration-300">
             <FaCheckCircle className="h-5 w-5 mr-3" />
             <p>Thank you for your message! I'll get back to you soon.</p>
           </div>
         )}
-
-        {showError && (
+                {showError && (
           <div className="mb-6 bg-red-500 bg-opacity-10 border border-red-500 rounded-lg p-4 flex items-center text-red-500 transition-all duration-300">
             <FaExclamationCircle className="h-5 w-5 mr-3" />
             <p>Please fix the errors in the form and try again.</p>
